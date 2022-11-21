@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { INote } from "src/app/interfaces/note.interface";
 
 @Component({
     selector: 'app-note',
@@ -6,4 +7,6 @@ import { Component } from "@angular/core";
     styleUrls: ['./note.component.scss']
 })
 
-export class NoteComponent {}
+export class NoteComponent {
+   @Input() note: INote;
+}

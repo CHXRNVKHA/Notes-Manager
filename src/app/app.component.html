@@ -1,8 +1,9 @@
 <section class="container">
   <h1 class="title">{{ title | titlecase }}</h1>
 
-  <app-note></app-note>
-  <app-note></app-note>
-  <app-note></app-note>
-  <app-note></app-note>
+  <app-note 
+    *ngFor="let note of notes$ | async"
+    [note] = "note"
+  >
+  </app-note>
 </section>
